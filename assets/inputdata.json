@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Server name",
+        "type": "text",
+        "name": "serverName",
+        "inputType": "single"
+    },
+    {
+        "title": "Server IP",
+        "type": "text",
+        "name": "serverIp",
+        "ip": "ip",
+        "inputType": "single"
+    },
+    {
+        "title": "Server Start Ip",
+        "type": "text",
+        "name": "serverRangeFrom",
+        "ip": "ip",
+        "inputType": "multi"
+    },
+    {
+        "title": "Server End Ip",
+        "type": "text",
+        "name": "serverRangeTo",
+        "ip": "ip",
+        "inputType": "multi"
+    },
+    {
+        "title": "Server password",
+        "type": "password",
+        "name": "serverPassword",
+        "inputType": "both"
+    }
+]

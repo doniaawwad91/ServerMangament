@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Server Mangament (CRUD to/from Json) - Lightbitslabs">
+
+
+    <!-- Title -->
+    <title>Server Mangament (CRUD to/from Json) - Lightbitslabs</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+
+    <!-- App CSS -->
+    <link href="assets/app.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Add loading-wrapper just below the body tag -->
+    <div id="loading-wrapper">
+        <div id="loading"></div>
+        <div class="loading-section section-left"></div>
+        <div class="loading-section section-right"></div>
+    </div>
+    <!--  Page Content goes here  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow mt-2">
+                    <div class="card-header border-0">
+                        <h3 class="mb-0">Server Crud</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="single-server-tab" data-toggle="pill"
+                                    href="#single-server" role="tab" aria-controls="single-server"
+                                    aria-selected="true">Single Server</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="multi-server-tab" data-toggle="pill" href="#multi-server"
+                                    role="tab" aria-controls="multi-server" aria-selected="false">Multi servers</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="single-server" role="tabpanel"
+                                aria-labelledby="single-server-tab">
+                                <form class="row g-3 needs-validation" name="single_server" novalidate
+                                    id="single_server"></form>
+                            </div>
+                            <div class="tab-pane fade" id="multi-server" role="tabpanel"
+                                aria-labelledby="multi-server-tab">
+                                <form class="row g-3 needs-validation" name="multi_server" novalidate id="multi_server">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow mt-2">
+                    <div class="card-header border-0">
+                        <h3 class="mb-0">Server table</h3>
+                        <div class="d-flex justify-content-end">
+                            <input type="file" id="file" style="display: none" accept="application/JSON" />
+                            <button class="btn btn-primary mr-1" id="button" name="button" value="Upload"
+                                onclick="thisFileUpload();">
+                                Import Json
+                            </button>
+
+                            <button class="btn btn-success mr-1" onclick="exportJson()">
+                                Export As Json
+                            </button>
+
+                            <button class="btn btn-success mr-1" onclick="exportYaml()">
+                                Export As Yaml
+                            </button>
+
+                            <button class="btn btn-secondary" onclick="exportLog()">
+                                Export Log
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="server-table" class="table-responsive"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="row">
+                <div class="col-xl-6 m-auto text-center">
+                    <div class="copyright">
+                        <p>Made By <a href="#" target="_blank">Donia Awwad</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+        </script>
+    <!-- JavaScript -->
+    <!-- <script src="assets/js-yaml.min.js"></script> -->
+    <script src="assets/json2yaml.js"></script>
+    <script src="assets/app.js"></script>
+
+</body>
+
+</html>
